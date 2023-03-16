@@ -9,7 +9,7 @@
   "scripts": {
     "build": "microbundle --no-compress --format modern,cjs",
     "prepare": "npm run build",
-    "test": "test"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
