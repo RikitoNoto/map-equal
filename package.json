@@ -1,15 +1,50 @@
 {
   "name": "map-equal",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "compare map object.",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.modern.mjs",
+  "source": "src/index.ts",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "test"
+    "build": "microbundle --no-compress --format modern,cjs",
+    "prepare": "npm run build",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
-    "url": "."
+    "url": "https://github.com/RikitoNoto/map-equal/tree/main"
   },
+  "files": [
+    "dist"
+  ],
   "author": "Rikito Noto",
-  "license": "MIT"
+  "license": "MIT",
+  "jest": {
+    "transform": {
+      ".(ts|tsx)": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "collectCoverage": true,
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    }
+  },
+  "dependencies": {
+    "@types/jest": "^24.0.23",
+    "jest": "^29.4.0",
+    "microbundle": "^0.15.1",
+    "ts-jest": "^29.0.5",
+    "typescript": "^4.6.2"
+  }
 }
