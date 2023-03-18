@@ -16,6 +16,25 @@ describe('Test: mapEqual', ()=>{
     ({map1, map2, result})=>{
       expect(mapEqual(map1, map2)).toBe(result);
     });
+  });
 
+  describe('Map<int|string, any>', ()=>{
+    it.each([
+      {map1: new Map<number|string, any>(), map2: new Map<number|string, any>(), result: true},
+      {map1: new Map<number|string, any>([[1,1]]), map2: new Map<number|string, any>([["1",1]]), result: false},
+      {map1: new Map<number|string, any>([[1,1]]), map2: new Map<number|string, any>([[1,"1"]]), result: false},
+    ])("should be return $result when contents are ($map1Content) ($map2Content).",
+    ({map1, map2, result})=>{
+      expect(mapEqual(map1, map2)).toBe(result);
+    });
+  });
+
+  describe('Map<int, pointer>', ()=>{
+    it.each([
+      {map1: new Map<number, any>([[1,{}]]), map2: new Map<number, any>([[1,{}]]), result: false},
+    ])("should be return $result when contents are ($map1Content) ($map2Content).",
+    ({map1, map2, result})=>{
+      expect(mapEqual(map1, map2)).toBe(result);
+    });
   });
 });
