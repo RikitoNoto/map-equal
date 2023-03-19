@@ -11,6 +11,24 @@
     "prepare": "npm run build",
     "test": "jest"
   },
+  "keywords": [
+    "check",
+    "compare",
+    "comparison",
+    "equal",
+    "equality",
+    "equals",
+    "is-equal",
+    "is-shallow-equal",
+    "isequal",
+    "isshallowequal",
+    "map",
+    "shallow-equal",
+    "shallow-equals",
+    "shallowequal",
+    "shallowequals",
+    "typescript"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/RikitoNoto/map-equal/tree/main"
