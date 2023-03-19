@@ -1,6 +1,6 @@
 {
   "name": "@rikitonoto/map-equal",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "compare map object.",
   "main": "dist/index.js",
   "module": "dist/index.modern.mjs",
@@ -11,6 +11,24 @@
     "prepare": "npm run build",
     "test": "jest"
   },
+  "keywords": [
+    "check",
+    "compare",
+    "comparison",
+    "equal",
+    "equality",
+    "equals",
+    "is-equal",
+    "is-shallow-equal",
+    "isequal",
+    "isshallowequal",
+    "map",
+    "shallow-equal",
+    "shallow-equals",
+    "shallowequal",
+    "shallowequals",
+    "typescript"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/RikitoNoto/map-equal/tree/main"
