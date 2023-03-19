@@ -1,5 +1,5 @@
 {
-  "name": "map-equal",
+  "name": "@rikitonoto/map-equal",
   "version": "1.0.0",
   "description": "compare map object.",
   "main": "dist/index.js",
@@ -18,7 +18,7 @@
   "files": [
     "dist"
   ],
-  "author": "Rikito Noto",
+  "author": "rikitonoto",
   "license": "MIT",
   "jest": {
     "transform": {
